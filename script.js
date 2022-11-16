@@ -20,17 +20,8 @@ function sortByName(array) {
     return 1;
   });
 }
-// sort shows by rating
 
-function sortByRating(allShows) {
-  allShows.sort((a, b) => {
-    console.log(a.rating.average);
-    if (a.rating.average < b.rating.average) {
-      return 1;
-    }
-    return -1;
-  });
-}
+
 function fetchEpisodes(showId) {
   fetch("https://api.tvmaze.com/shows/" + showId + "/episodes")
     .then((response) => response.json())
@@ -143,15 +134,6 @@ function displayShow(show) {
   summaryElement.classList = "episode-summary";
   genreRatingStatus.classList = "genre-rating-status";
 
-  // genre,status,rating and runtime inner content
-
-  genreElement.innerHTML = `Genres:   ${show.genres}`;
-  runTimeElement.innerHTML = `Runtime:   ${show.runtime}`;
-  statusElement.innerHTML = `Status:   ${show.status}`;
-
-  if (show.rating) {
-    ratingElement.innerHTML = `Rating: ${show.rating.average}`;
-  }
 
   titleElement.innerHTML = `<a href="#" target="">${show.name}</a>`; //adds anchor element to the title
   
