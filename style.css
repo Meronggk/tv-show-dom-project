@@ -1,29 +1,214 @@
-#root {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 2rem;
-}
+html,
 body {
-    background-color: inear-gradient(black, black);
+  width: 100%;
+  background-color: #07023f;
+color: white;
 }
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 80%;
-    border-radius: 5px;
+#select-input-container span {
+  color: white;
+  font-size: medium;
+  margin-left: 2%;
+}
+#source {
+  text-decoration: none;
+  color: black;
+  background-color: grey;
+}
+.episode-title > a {
+  text-decoration: none;
+  color: black;
+}
+.episode-title > a:hover {
+  color: white;
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+#root > div > div {
+  width: 100%;
+  height: 30%;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-size: larger;
+  color: orange;
+}
+@media only screen and (max-width: 400px) {
+  #root {
+    color: black;
+    background-color: #164a41;
+    display: grid;
+    grid-template-columns: repeat(1, 380px);
+    gap: 10px;
+    grid-auto-rows: max-content;
+    width: 100%;
+  }
+  h1 {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+  }
+  #root > div {
+    width: 100%;
+    height: 75%;
+    background-color: #164a41;
+    margin-top: 20px;
+  }
+  .episode-title {
+    width: 90%;
+    text-align: center;
+    margin-top: 0px;
+    height: 30px;
+    background-color: rgb(247, 154, 93);
+    border: 1px solid rgb(160, 159, 159);
+    border-radius: 10px;
+    padding-top: 15px;
+    box-shadow: 2px 2px grey;
+  }
+  .episode-image {
+    height: 30%;
+    width: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .episode-summary {
+    width: 90%;
+    color: white;
+  }
+  #select-input-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #search-field {
+    height: 20px;
+    width: 120px;
+    font-size: 1rem;
+  }
+
+  #selectMenu {
+    background-color: white;
+    font-size: 1rem;
+    width: 120px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  /*select show*/
+  #selectShow {
+    background-color: white;
+    font-size: 1rem;
+    width: 120px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  #root > div > div {
+    width: 90%;
+    height: 30%;
+  }
+}
+/* media query for over 400px */
+@media only screen and (min-width: 400px) {
+  #root {
+    color: black;
+    background-color: #07023f;
+    display: grid;
+    grid-template-columns: repeat(1, 380px);
+    gap: 10px;
+    grid-auto-rows: max-content;
+    width: 100%;
+  }
+  h1 {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: left;
+    color: white;
+  }
+  #root > div {
+    width: 100%;
+    height: 75%;
+    background-color: #052253;
+    margin-top: 20px;
+  }
+  .episode-title {
+    text-align: center;
+    margin-top: 10px;
+    height: 30px;
+    background-color: rgb(234, 48, 45);
+    border: 1px solid rgb(160, 159, 159);
+    border-radius: 10px;
+    padding-top: 15px;
+    box-shadow: 2px 2px grey;
+    width: 90%;
+  }
+  .episode-image {
+    height: 30%;
+    width: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .episode-summary {
+    width: 90%;
+    color: white;
+  }
+  #select-input-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #root > div > div {
+    width: 90%;
+    height: 30%;
+  }
+  #search-field {
+    height: 25px;
+    width: 15%;
+    background-color: white;
+    font-size: 1rem;
+    margin-left: 3%;
+  }
+
+  #selectMenu {
+    background-color: white;
+    font-size: 1rem;
+    width: 20%;
+    height: 25px;
+  }
+  /*select show*/
+  #selectShow {
+    background-color: white;
+    font-size: 1rem;
+    width: 20%;
+    height: 25px;
+    margin-right: 3%;
+  }
+  #select-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
+/* for devices 768 and over  */
+@media only screen and (min-width: 768px) {
+  #root {
+    grid-template-columns: repeat(auto-fill, 360px);
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: sans-serif;
+  }
+  .episode-title {
+    height: 40px;
+  }
+  .episode-image {
+    height: 40%;
+  }
+  #root > div > div {
+    width: 90%;
+    height: 30%;
+  }
+  .episode-summary {
+    line-height: 25px;
+  }
 }
 
-.container {
-    padding: 2px 16px;
-}
-.line-clamp {
-    display: -webkit-box;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
+

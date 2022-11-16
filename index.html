@@ -5,29 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TV Show Project | Meron (Marryggk)</title>
     <link href="style.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-  <header id="header">
- <nav class="navbar bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand">TV Shows</a>
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
+  <header id="header">  
+ <h2>TV Shows</h2> 
+</header>
+ <div>
+      <p> Sourced from<a id="source" href="https://www.tvmaze.com/"> TVMAZE.com</a></p>
+    </div>
+  <div id="select-input-container">
+    <select name="Episodes" id="selectShow">
+      <option value="">select a Show</option>
+    </select>
+    <select name="Episodes" id="selectMenu">
+      <option value="" id="default-option">select an episode</option>
+    </select>
+
+    <input id="search-field" type="search" placeholder="Search for an episode">
+    <span id="results"></span>
   </div>
-</nav>
-
-
-  </header>
+  </div>
   <div id="root">
 
   </div>
@@ -37,15 +36,5 @@
     <script src="shows.js"></script>
     <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
-     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script> 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
