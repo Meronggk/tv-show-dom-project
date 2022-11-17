@@ -245,7 +245,7 @@ function createDropDownMenuForEpisodes(allEpisodes) {
     });
     displayAllEpisodes(selected);
     result.innerHTML = `Displaying ${selected.length} / ${allEpisodes.length}`;
-    // when the select an episode choice is selected tall episodes will be displayed
+    
     if (selectEpisodeTag.value == "") {
       displayAllEpisodes(episodes);
       result.innerHTML = `Displaying ${allEpisodes.length} / ${allEpisodes.length}`;
