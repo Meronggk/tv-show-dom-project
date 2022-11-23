@@ -1,8 +1,9 @@
 html,
 body {
   width: 100%;
-  background-color: rgb(53, 81, 64);
+  background-color: rgb(48, 46, 46);
 color: white;
+
 }
 #select-input-container span {
   color: white;
@@ -11,8 +12,8 @@ color: white;
 }
 #source {
   text-decoration: none;
-  color: rgb(15, 61, 33);
-  background-color: #b8b5b5;
+  color: rgb(8, 9, 9);
+  background-color: #242020;
 }
 .episode-title > a {
   text-decoration: none;
@@ -22,31 +23,33 @@ color: white;
   color: white;
 }
 #root>div>div {
-    width: 100%;
-    height: 30%;
+    width: 70%;
+    height: 90%;
     border-radius: 10px;
     margin-top: 30px;
     font-size: larger;
     color: orange;
 }
-p{
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
+.episode-summary{
+   display: -webkit-box;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    /* text-overflow: ellipsis; */
+    text-overflow: ellipsis;
     overflow: hidden;
 }
-    
+ 
 
 @media only screen and (max-width: 400px) {
 #root {
-        color: rgb(60, 65, 60);
-        background-color: rgb(53, 81, 64);
+        color: rgb(16, 17, 16);
+        background-color: rgb(48, 46, 46);
         display: grid;
         grid-template-columns: repeat(1, 380px);
         gap: 10px;
         grid-auto-rows: max-content;
         width: 100%;
+        
+        
     }
   h1 {
     font-family: Helvetica;
@@ -83,6 +86,7 @@ p{
     width: 120px;
     height: 20px;
     margin-right: 10px;
+    border-radius: 30px;
   }
   /*select show*/
   #selectShow {
@@ -100,8 +104,8 @@ p{
 /* media query for over 400px */
 @media only screen and (min-width: 400px) {
   #root {
-    color: rgb(60, 65, 60);
-    background-color: rgb(53, 81, 64);
+    color: rgb(22, 24, 22);
+    background-color: rgb(48, 46, 46);
     display: grid;
     grid-template-columns: repeat(1, 380px);
     gap: 10px;
@@ -115,33 +119,34 @@ p{
     color: white;
   }
   #root > div {
-    width: 100%;
-    height: 75%;
-    background-color: rgb(29, 52, 38);
+    width: 70%;
+    height: 90%;
+    background-color: black;
     margin-top: 30px;
     margin-left: 50px;
-    border-radius: 30px;
+    border-radius: 10px;
   }
   .episode-title {
     text-align: center;
     margin-top: 10px;
     height: 30px;
-    background-color: rgb(119, 95, 99);
-    border: 1px solid rgb(29, 28, 28);
-    border-radius: 10px;
+    /* background-color: rgb(119, 95, 99); */
+    /* border: 1px solid rgb(29, 28, 28);
+    border-radius: 10px; */
     padding-top: 15px;
-    box-shadow: 2px 2px grey;
     width: 90%;
   }
   .episode-image {
     height: 30%;
     width: 50%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 60px;
+    margin-right: 30px;
   }
   .episode-summary {
     width: 90%;
     color: white;
+    margin-left: 10px;
+    margin-right: 10px;
     
   }
   #select-input-container {
@@ -187,6 +192,8 @@ p{
 @media only screen and (min-width: 768px) {
   #root {
     grid-template-columns: repeat(auto-fill, 360px);
+    margin-right: 20px;
+    margin-right: 10px;
   }
   h1 {
     text-align: center;
